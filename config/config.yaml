@@ -1,1 +1,58 @@
 #config_version=6
+hardware:
+  platform: fast
+  driverboards: fast
+
+fast:
+  ports: com4, com5
+  config_number_format: = 'hex'
+
+switches:
+  s_left_flipper:
+    number: 0B
+    tags: left_flipper
+  s_left_upper_flipper:
+    number: 0C
+    tags: left_flipper
+  s_right_flipper:
+    number: 10
+    tags: right_flipper
+
+coils:
+  c_flipper_left_main:
+    number: 0D
+  c_flipper_left_hold:
+    number: 0C
+    allow_enable: true
+  c_flipper_right_main:
+    number: 0F
+  c_flipper_right_hold:
+    number: 0E
+    allow_enable: true
+  c_flipper_upper_left_main:
+    number: 23
+  c_flipper_upper_left_hold:
+    number: 22
+    allow_enable: true
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: None  # use None in steps before 8
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+  right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
+  left_upper_flipper:
+    main_coil: c_flipper_upper_left_main
+    hold_coil: c_flipper_upper_left_hold
+    activation_switch: s_left_upper_flipper
+    enable_events: machine_reset_phase_3
