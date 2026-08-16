@@ -43,30 +43,30 @@ fast:
 
 switches:
   s_left_flipper:
-    number: cab-8      # Left flipper button
+    number: cab-0x08      # Left flipper button (was 0B, now 08 per 2026 column)
     tags: left_flipper
   s_left_upper_flipper:
-    number: cab-9      # Upper left flipper button  
+    number: cab-0x09      # Upper left flipper button  
     tags: left_flipper
   s_right_flipper:
-    number: cab-16     # Right flipper button (0x10 = 16)
+    number: cab-0x10      # Right flipper button
     tags: right_flipper
 
 coils:
   c_flipper_left_main:
-    number: cab-5      # Lower left main
+    number: cab-0x0D      # Lower left main
   c_flipper_left_hold:
-    number: cab-4      # Lower left hold
+    number: cab-0x0C      # Lower left hold
     allow_enable: true
   c_flipper_right_main:
-    number: cab-7      # Lower right main
+    number: cab-0x0F      # Lower right main
   c_flipper_right_hold:
-    number: cab-6      # Lower right hold
+    number: cab-0x0E      # Lower right hold
     allow_enable: true
   c_flipper_upper_left_main:
-    number: 0804-3     # Upper left main
+    number: io_0804-0x03  # Upper left main (was 23 hex = on 0804 board)
   c_flipper_upper_left_hold:
-    number: 0804-2     # Upper left hold
+    number: io_0804-0x02  # Upper left hold (was 22 hex = on 0804 board)
     allow_enable: true
 
 playfields:
