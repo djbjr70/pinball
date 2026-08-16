@@ -4,6 +4,7 @@ hardware:
   driverboards: fast
 
 fast:
+  config_number_format: hex
   net:
     controller: neuron
     io_loop:
