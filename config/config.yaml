@@ -13,11 +13,11 @@ fast:
     1616:
       model: FP-I/O-1616
       order: 2
-    "0804":
-      model: FP-I/O-0804
-      order: 3
     3208:
       model: FP-I/O-3208
+      order: 3
+    "0804":
+      model: FP-I/O-0804
       order: 4
 
 switches:
