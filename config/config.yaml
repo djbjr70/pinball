@@ -10,15 +10,36 @@ fast:
       cab:
         model: FP-I/O-0024
         order: 1
-    1616:
-      model: FP-I/O-1616
-      order: 2
-    3208:
-      model: FP-I/O-3208
-      order: 3
-    "0804":
-      model: FP-I/O-0804
-      order: 4
+      1616:
+        model: FP-I/O-1616
+        order: 2
+      3208:
+        model: FP-I/O-3208
+        order: 3
+      "0804":
+        model: FP-I/O-0804
+        order: 4
+    port: auto
+    baud: 921600
+    debug: false
+    watchdog: 1s
+    default_quick_debounce_open: 2ms
+    default_quick_debounce_close: 2ms
+    default_normal_debounce_open: 4ms
+    default_normal_debounce_close: 4ms
+  exp:
+    boards:
+      exp_2000:
+        model: FP-EXP-2000
+        led_fade_time: 100ms
+      exp_91:
+        model: FP-EXP-0091
+        led_fade_time: 100ms
+    port: auto
+    baud: 921600
+    debug: False
+
+
 
 switches:
   s_left_flipper:
