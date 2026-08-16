@@ -3,6 +3,23 @@ hardware:
   platform: fast
   driverboards: fast
 
+fast:
+  net:
+    controller: neuron
+    io_loop:
+      cab:
+        model: FP-I/O-0024
+        order: 1
+    1616:
+      model: FP-I/O-1616
+      order: 2
+    "0804":
+      model: FP-I/O-0804
+      order: 3
+    3208:
+      model: FP-I/O-3208
+      order: 4
+
 switches:
   s_left_flipper:
     number: 0B
