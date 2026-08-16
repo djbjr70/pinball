@@ -8,16 +8,16 @@ fast:
     controller: neuron
     io_loop:
       cab:
-        model: FP-I/O-0024
+        model: FP-I/O-0024-3
         order: 1
       1616:
-        model: FP-I/O-1616
+        model: FP-I/O-1616-3
         order: 2
       3208:
-        model: FP-I/O-3208
+        model: FP-I/O-3208-2
         order: 3
       "0804":
-        model: FP-I/O-0804
+        model: FP-I/O-0804-3
         order: 4
     port: auto
     baud: 921600
