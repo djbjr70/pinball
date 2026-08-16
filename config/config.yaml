@@ -12,13 +12,13 @@ fast:
         order: 1
       "0804":
         model: FP-I/O-0804-3
-        order: 2
+        order: 4
       1616:
         model: FP-I/O-1616-3
         order: 3
       3208:
         model: FP-I/O-3208-2
-        order: 4
+        order: 2
     port: auto
     baud: 921600
     debug: false
