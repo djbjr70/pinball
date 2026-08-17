@@ -54,14 +54,14 @@ switches:
 
 coils:
   c_flipper_left_main:
-    number: cab-13        # Lower left main
+    number: 1616-13       # Lower left main
   c_flipper_left_hold:
-    number: cab-12        # Lower left hold
+    number: 1616-12       # Lower left hold
     allow_enable: true
   c_flipper_right_main:
-    number: cab-15        # Lower right main
+    number: 1616-15       # Lower right main
   c_flipper_right_hold:
-    number: cab-14        # Lower right hold
+    number: 1616-14       # Lower right hold
     allow_enable: true
   c_flipper_upper_left_main:
     number: io_0804-3     # Upper left main (was 23 hex = on 0804 board)
