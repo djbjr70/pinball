@@ -46,10 +46,10 @@ switches:
     number: cab-8         # Left flipper button (was 0B, now 08 per 2026 column)
     tags: left_flipper
   s_left_upper_flipper:
-    number: cab-16        # Upper left flipper button
+    number: cab-9         # Upper left flipper button
     tags: left_flipper
   s_right_flipper:
-    number: cab-9         # Right flipper button
+    number: cab-16        # Right flipper button
     tags: right_flipper
 
 coils:
