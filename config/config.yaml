@@ -219,7 +219,7 @@ coils:
   # --- Trough & ball handling (3208 board, global 0x10-0x11) ---
   c_trough:
     number: 3208-4
-    default_pulse_ms: 25
+    default_pulse_ms: 18
   c_auto_launcher:
     number: 3208-5
     default_pulse_ms: 15
@@ -330,16 +330,19 @@ flippers:
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_left_flipper_eos
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ended
   right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
     eos_switch: s_right_flipper_eos
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ended
   left_upper_flipper:
     main_coil: c_flipper_upper_left_main
     hold_coil: c_flipper_upper_left_hold
     activation_switch: s_left_upper_flipper
     eos_switch: s_upper_flipper_eos
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ended
