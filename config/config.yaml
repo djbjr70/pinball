@@ -350,3 +350,54 @@ flippers:
     eos_switch: s_upper_flipper_eos
     enable_events: ball_started
     disable_events: ball_ended
+
+
+lights:
+  # --- Playfield inserts on FP-EXP-2000 (sequential from 0) ---
+  # These are the first 8 single-LED inserts before the clock lamp section.
+  # Observe which physical lights respond to verify chain order is correct.
+  l_gangway_75000:
+    number: exp_2000-0
+  l_gangway_100000:
+    number: exp_2000-1
+  l_gangway_150000:
+    number: exp_2000-2
+  l_gangway_200000:
+    number: exp_2000-3
+  l_gangway_250000:
+    number: exp_2000-4
+  l_gangway_extra_ball:
+    number: exp_2000-5
+  l_shoot_again:
+    number: exp_2000-6
+  l_steps_open:
+    number: exp_2000-7
+
+  # --- Backglass / controller LEDs on FP-EXP-0091 (sequential from 0) ---
+  l_backglass_1:
+    number: exp_91-0
+  l_backglass_2:
+    number: exp_91-1
+  l_backglass_3:
+    number: exp_91-2
+  l_backglass_4:
+    number: exp_91-3
+  l_backglass_5:
+    number: exp_91-4
+
+
+light_player:
+  machine_reset_phase_3:
+    l_gangway_75000: white
+    l_gangway_100000: white
+    l_gangway_150000: white
+    l_gangway_200000: white
+    l_gangway_250000: white
+    l_gangway_extra_ball: white
+    l_shoot_again: white
+    l_steps_open: white
+    l_backglass_1: white
+    l_backglass_2: white
+    l_backglass_3: white
+    l_backglass_4: white
+    l_backglass_5: white
