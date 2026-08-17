@@ -40,53 +40,291 @@ fast:
     debug: false
 
 
-
 switches:
+  # --- Cabinet (FP-I/O-0024, global 0x00-0x17) ---
+  s_volume_down:
+    number: cab-1
+  s_volume_up:
+    number: cab-2
+  s_begin_test:
+    number: cab-3
   s_left_flipper:
-    number: cab-8         # Left flipper button (was 0B, now 08 per 2026 column)
+    number: cab-8
     tags: left_flipper
   s_left_upper_flipper:
-    number: cab-9         # Upper left flipper button
+    number: cab-9
     tags: left_flipper
+  s_start_button:
+    number: cab-10
+    tags: start
+  s_tilt:
+    number: cab-11
+    tags: tilt
   s_right_flipper:
-    number: cab-16        # Right flipper button
+    number: cab-16
     tags: right_flipper
 
+  # --- 0804 board switches (FP-I/O-0804, global 0x18-0x1F) ---
+  # FT-LT-20 connector (upper playfield area)
+  s_gangway_up_r:
+    number: 0804-0
+  s_trapdoor_loop:
+    number: 0804-1
+  s_rudys_hideout:
+    number: 0804-2
+  s_wind_tunnel:
+    number: 0804-3
+  s_trapdoor:
+    number: 0804-4
+  s_trapdoor_closed:
+    number: 0804-5
+  s_dummy_eject_sw:
+    number: 0804-6
+
+  # --- 3208 board switches (FP-I/O-3208, global 0x20-0x3F, local = global-32) ---
+  # Trough switches (global 0x20-0x26)
+  s_trough1:
+    number: 3208-0
+  s_trough2:
+    number: 3208-1
+  s_trough3:
+    number: 3208-2
+  s_trough4:
+    number: 3208-3
+  s_trough5:
+    number: 3208-4
+  s_trough6:
+    number: 3208-5
+  s_trough_jam:
+    number: 3208-6
+
+  # FP-AUX-0002 / right ballshooter (global 0x27)
+  s_shooter_right:
+    number: 3208-7
+
+  # FT-LT-05 connector — upper playfield targets (global 0x28-0x2F)
+  s_step_t:
+    number: 3208-8
+  s_step_e:
+    number: 3208-9
+  s_bumper_up_l:
+    number: 3208-10
+  s_superdog_upper:
+    number: 3208-11
+  s_superdog_middle:
+    number: 3208-12
+  s_superdog_lower:
+    number: 3208-13
+  s_step_p:
+    number: 3208-14
+  s_step_s:
+    number: 3208-15
+
+  # FH-LT-13 connector — mid playfield (global 0x30-0x37)
+  s_bumper_up_r:
+    number: 3208-16
+  s_ramp_exit:
+    number: 3208-17
+  s_steps_track_upper:
+    number: 3208-18
+  s_tunnel_kickout:
+    number: 3208-23
+
+  # FH-LT-13 continued — lower playfield (global 0x34-0x37)
+  s_bumper_lower:
+    number: 3208-20
+  s_bumper_lane:
+    number: 3208-21
+  s_drop_hole:
+    number: 3208-22
+
+  # FH-LT-03 connector — flipper area (global 0x38-0x3F)
+  s_right_flipper_eos:
+    number: 3208-24
+  s_slingshot_right:
+    number: 3208-25
+  s_inlane_right:
+    number: 3208-26
+  s_inlane_right_outer:
+    number: 3208-27
+  s_outlane_right:
+    number: 3208-28
+  s_shooter_left:
+    number: 3208-29
+  s_slingshot_left:
+    number: 3208-30
+  s_left_flipper_eos:
+    number: 3208-31
+
+  # --- 1616 board switches (FP-I/O-1616, global 0x40-0x4F, local = global-64) ---
+  # FH-LT-06 / FH-LT-09 connectors (global 0x41-0x47)
+  s_lock_right:
+    number: 1616-1
+  s_lock_center:
+    number: 1616-2
+  s_lock_left:
+    number: 1616-3
+  s_steps_track_lower:
+    number: 1616-4
+  s_inlane_left:
+    number: 1616-5
+  s_outlane_left:
+    number: 1616-6
+  s_upper_flipper_eos:
+    number: 1616-7
+
+  # FH-LT-17 connector — steps lights (global 0x48-0x4A)
+  s_steps_frenzy:
+    number: 1616-8
+  s_steps_extra_ball:
+    number: 1616-9
+  s_steps_500k:
+    number: 1616-10
+
+  # FP-BRK-7072 connector (global 0x4B-0x4F)
+  s_upper_ramp:
+    number: 1616-11
+  s_ramp_entrance:
+    number: 1616-12
+  s_dummy_jaw:
+    number: 1616-14
+    type: NC
+  s_steps_superdog:
+    number: 1616-15
+    type: NC
+
+
 coils:
+  # --- Lower left flipper (3208 board, global 0x0C-0x0D) ---
   c_flipper_left_main:
-    number: 3208-1        # Lower left main (global 0x0D)
+    number: 3208-1
   c_flipper_left_hold:
-    number: 3208-0        # Lower left hold (global 0x0C)
+    number: 3208-0
     allow_enable: true
+
+  # --- Lower right flipper (3208 board, global 0x0E-0x0F) ---
   c_flipper_right_main:
-    number: 3208-3        # Lower right main (global 0x0F)
+    number: 3208-3
   c_flipper_right_hold:
-    number: 3208-2        # Lower right hold (global 0x0E)
+    number: 3208-2
     allow_enable: true
+
+  # --- Upper left flipper (1616 board, global 0x22-0x23) ---
   c_flipper_upper_left_main:
-    number: 1616-15       # Upper left main (global 0x23)
+    number: 1616-15
   c_flipper_upper_left_hold:
-    number: 1616-14       # Upper left hold (global 0x22)
+    number: 1616-14
     allow_enable: true
+
+  # --- Trough & ball handling (3208 board, global 0x10-0x11) ---
+  c_trough:
+    number: 3208-4
+    default_pulse_ms: 15
+  c_auto_launcher:
+    number: 3208-5
+    default_pulse_ms: 15
+
+  # --- Slingshots (3208 board, global 0x12-0x13) ---
+  c_slingshot_right:
+    number: 3208-6
+    default_pulse_ms: 10
+  c_slingshot_left:
+    number: 3208-7
+    default_pulse_ms: 10
+
+  # --- Bumpers (1616 board, global 0x1C, 0x1E, 0x20) ---
+  c_bumper_up_r:
+    number: 1616-8
+    default_pulse_ms: 25
+  c_bumper_up_l:
+    number: 1616-10
+    default_pulse_ms: 25
+  c_bumper_lower:
+    number: 1616-12
+    default_pulse_ms: 25
+
+  # --- Animatronics: eyes (0804 board, global 0x08-0x0B) ---
+  c_eyes_right:
+    number: 0804-0
+  c_eyelids_open:
+    number: 0804-1
+  c_eyelids_closed:
+    number: 0804-2
+  c_eyes_left:
+    number: 0804-3
+
+  # --- Cabinet (cab board, global 0x07) ---
+  c_knocker:
+    number: cab-7
+    default_pulse_ms: 50
+
+  # --- Playfield mechanisms (1616 board) ---
+  c_mouth_motor:
+    number: 1616-0
+  c_mouth_up_down:
+    number: 1616-1
+  c_kickbig:
+    number: 1616-2
+    default_pulse_ms: 15
+  c_multiball_release:
+    number: 1616-3
+    default_pulse_ms: 15
+  c_steps_gate:
+    number: 1616-4
+  c_trap_closed:
+    number: 1616-5
+  c_trap_door_open:
+    number: 1616-6
+  c_dummy_eject:
+    number: 1616-7
+    default_pulse_ms: 15
+  c_ramp_diverter:
+    number: 1616-9
+  c_tunnel_kickbig:
+    number: 1616-11
+    default_pulse_ms: 15
+
+
+autofire_coils:
+  ac_slingshot_left:
+    coil: c_slingshot_left
+    switch: s_slingshot_left
+  ac_slingshot_right:
+    coil: c_slingshot_right
+    switch: s_slingshot_right
+  ac_bumper_up_l:
+    coil: c_bumper_up_l
+    switch: s_bumper_up_l
+  ac_bumper_up_r:
+    coil: c_bumper_up_r
+    switch: s_bumper_up_r
+  ac_bumper_lower:
+    coil: c_bumper_lower
+    switch: s_bumper_lower
+
 
 playfields:
   playfield:
     tags: default
-    default_source_device: None  # use None in steps before 8
+    default_source_device: None
+
 
 flippers:
   left_flipper:
     main_coil: c_flipper_left_main
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
+    eos_switch: s_left_flipper_eos
     enable_events: machine_reset_phase_3
   right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
+    eos_switch: s_right_flipper_eos
     enable_events: machine_reset_phase_3
   left_upper_flipper:
     main_coil: c_flipper_upper_left_main
     hold_coil: c_flipper_upper_left_hold
     activation_switch: s_left_upper_flipper
+    eos_switch: s_upper_flipper_eos
     enable_events: machine_reset_phase_3
