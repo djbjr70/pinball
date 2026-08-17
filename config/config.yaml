@@ -353,37 +353,37 @@ flippers:
 
 
 lights:
-  # --- Playfield inserts on FP-EXP-2000 (sequential from 0) ---
-  # These are the first 8 single-LED inserts before the clock lamp section.
+  # --- Playfield inserts on FP-EXP-2000 port 0 (FP-BRK-0001 breakout) ---
+  # Format: board-port-led  (port 0 = FP-BRK-0001)
   # Observe which physical lights respond to verify chain order is correct.
   l_gangway_75000:
-    number: exp_2000-0
+    number: exp_2000-0-0
   l_gangway_100000:
-    number: exp_2000-1
+    number: exp_2000-0-1
   l_gangway_150000:
-    number: exp_2000-2
+    number: exp_2000-0-2
   l_gangway_200000:
-    number: exp_2000-3
+    number: exp_2000-0-3
   l_gangway_250000:
-    number: exp_2000-4
+    number: exp_2000-0-4
   l_gangway_extra_ball:
-    number: exp_2000-5
+    number: exp_2000-0-5
   l_shoot_again:
-    number: exp_2000-6
+    number: exp_2000-0-6
   l_steps_open:
-    number: exp_2000-7
+    number: exp_2000-0-7
 
-  # --- Backglass / controller LEDs on FP-EXP-0091 (sequential from 0) ---
+  # --- Backglass / controller LEDs on FP-EXP-0091 port 0 ---
   l_backglass_1:
-    number: exp_91-0
+    number: exp_91-0-0
   l_backglass_2:
-    number: exp_91-1
+    number: exp_91-0-1
   l_backglass_3:
-    number: exp_91-2
+    number: exp_91-0-2
   l_backglass_4:
-    number: exp_91-3
+    number: exp_91-0-3
   l_backglass_5:
-    number: exp_91-4
+    number: exp_91-0-4
 
 
 light_player:
