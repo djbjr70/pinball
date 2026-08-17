@@ -54,14 +54,14 @@ switches:
 
 coils:
   c_flipper_left_main:
-    number: 3208-1        # Lower left main
+    number: 3208-0        # Lower left main
   c_flipper_left_hold:
-    number: 3208-0        # Lower left hold
+    number: 3208-2        # Lower left hold
     allow_enable: true
   c_flipper_right_main:
-    number: 3208-3        # Lower right main
+    number: 3208-1        # Lower right main
   c_flipper_right_hold:
-    number: 3208-2        # Lower right hold
+    number: 3208-3        # Lower right hold
     allow_enable: true
   c_flipper_upper_left_main:
     number: 0804-3        # Upper left main
@@ -88,5 +88,5 @@ flippers:
   left_upper_flipper:
     main_coil: c_flipper_upper_left_main
     hold_coil: c_flipper_upper_left_hold
-    activation_switch: s_left_upper_flipper
+    activation_switch: s_left_flipper
     enable_events: machine_reset_phase_3
