@@ -219,7 +219,7 @@ coils:
   # --- Trough & ball handling (3208 board, global 0x10-0x11) ---
   c_trough:
     number: 3208-4
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_auto_launcher:
     number: 3208-5
     default_pulse_ms: 15
@@ -312,7 +312,7 @@ ball_devices:
     eject_targets: bd_plunger
 
   bd_plunger:
-    ball_switches: s_shooter_left
+    ball_switches: s_shooter_right
     eject_coil: c_auto_launcher
     tags: ball_add_live_target
     eject_targets: playfield
