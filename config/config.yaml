@@ -432,22 +432,6 @@ lights:
     number: exp_2000-1-31
   l_p32:
     number: exp_2000-1-32
-  l_p33:
-    number: exp_2000-1-33
-  l_p34:
-    number: exp_2000-1-34
-  l_p35:
-    number: exp_2000-1-35
-  l_p36:
-    number: exp_2000-1-36
-  l_p37:
-    number: exp_2000-1-37
-  l_p38:
-    number: exp_2000-1-38
-  l_p39:
-    number: exp_2000-1-39
-  l_p40:
-    number: exp_2000-1-40
 
   # FP-EXP-0091 port 1: 20 LEDs — White(1-10) Cyan(11-20)
   l_b1:
