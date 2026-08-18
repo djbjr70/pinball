@@ -294,39 +294,31 @@ coils:
     default_pulse_ms: 15
 
 
-autofire_coils:
-  ac_slingshot_left:
-    coil: c_slingshot_left
-    switch: s_slingshot_left
-    enable_events: machine_reset_phase_3
-  ac_slingshot_right:
-    coil: c_slingshot_right
-    switch: s_slingshot_right
-    enable_events: machine_reset_phase_3
-  ac_bumper_up_l:
-    coil: c_bumper_up_l
-    switch: s_bumper_up_l
-    enable_events: machine_reset_phase_3
-  ac_bumper_up_r:
-    coil: c_bumper_up_r
-    switch: s_bumper_up_r
-    enable_events: machine_reset_phase_3
-  ac_bumper_lower:
-    coil: c_bumper_lower
-    switch: s_bumper_lower
-    enable_events: machine_reset_phase_3
-  ac_rudys_hideout:
-    coil: c_kickbig
-    switch: s_rudys_hideout
-    enable_events: machine_reset_phase_3
-  ac_dummy_eject:
-    coil: c_dummy_eject
-    switch: s_dummy_eject_sw
-    enable_events: machine_reset_phase_3
-  ac_tunnel_kickout:
-    coil: c_tunnel_kickbig
-    switch: s_tunnel_kickout
-    enable_events: machine_reset_phase_3
+coil_player:
+  s_bumper_up_l_active:
+    c_bumper_up_l:
+      action: pulse
+  s_bumper_up_r_active:
+    c_bumper_up_r:
+      action: pulse
+  s_bumper_lower_active:
+    c_bumper_lower:
+      action: pulse
+  s_slingshot_left_active:
+    c_slingshot_left:
+      action: pulse
+  s_slingshot_right_active:
+    c_slingshot_right:
+      action: pulse
+  s_rudys_hideout_active:
+    c_kickbig:
+      action: pulse
+  s_dummy_eject_sw_active:
+    c_dummy_eject:
+      action: pulse
+  s_tunnel_kickout_active:
+    c_tunnel_kickbig:
+      action: pulse
 
 
 ball_devices:
@@ -500,65 +492,8 @@ lights:
     number: exp_91-1-20
 
 
-light_player:
+show_player:
   machine_reset_phase_3:
-    l_p1: red
-    l_p2: red
-    l_p3: red
-    l_p4: red
-    l_p5: red
-    l_p6: red
-    l_p7: red
-    l_p8: red
-    l_p9: red
-    l_p10: red
-    l_p11: green
-    l_p12: green
-    l_p13: green
-    l_p14: green
-    l_p15: green
-    l_p16: green
-    l_p17: green
-    l_p18: green
-    l_p19: green
-    l_p20: green
-    l_p21: blue
-    l_p22: blue
-    l_p23: blue
-    l_p24: blue
-    l_p25: blue
-    l_p26: blue
-    l_p27: blue
-    l_p28: blue
-    l_p29: blue
-    l_p30: blue
-    l_p31: yellow
-    l_p32: yellow
-    l_p33: yellow
-    l_p34: yellow
-    l_p35: yellow
-    l_p36: yellow
-    l_p37: yellow
-    l_p38: yellow
-    l_p39: yellow
-    l_p40: yellow
-    l_b1: white
-    l_b2: white
-    l_b3: white
-    l_b4: white
-    l_b5: white
-    l_b6: white
-    l_b7: white
-    l_b8: white
-    l_b9: white
-    l_b10: white
-    l_b11: cyan
-    l_b12: cyan
-    l_b13: cyan
-    l_b14: cyan
-    l_b15: cyan
-    l_b16: cyan
-    l_b17: cyan
-    l_b18: cyan
-    l_b19: cyan
-    l_b20: cyan
+    rgb_cycle:
+      loops: -1
+      speed: 1
