@@ -476,8 +476,180 @@ lights:
     number: exp_91-1-20
 
 
-show_player:
-  machine_reset_phase_3:
-    rgb_cycle:
-      loops: -1
-      speed: 1
+timers:
+  color_cycle:
+    start_value: 0
+    end_value: 3
+    tick_interval: 2s
+    restart_on_complete: true
+    start_running: false
+    control_events:
+      - event: machine_reset_phase_3
+        action: start
+
+event_player:
+  machine_reset_phase_3: color_cycle_red
+  timer_color_cycle_tick{value==1}: color_cycle_white
+  timer_color_cycle_tick{value==2}: color_cycle_blue
+  timer_color_cycle_complete: color_cycle_red
+
+light_player:
+  color_cycle_red:
+    l_p1: {color: red, fade: 1000ms}
+    l_p2: {color: red, fade: 1000ms}
+    l_p3: {color: red, fade: 1000ms}
+    l_p4: {color: red, fade: 1000ms}
+    l_p5: {color: red, fade: 1000ms}
+    l_p6: {color: red, fade: 1000ms}
+    l_p7: {color: red, fade: 1000ms}
+    l_p8: {color: red, fade: 1000ms}
+    l_p9: {color: red, fade: 1000ms}
+    l_p10: {color: red, fade: 1000ms}
+    l_p11: {color: red, fade: 1000ms}
+    l_p12: {color: red, fade: 1000ms}
+    l_p13: {color: red, fade: 1000ms}
+    l_p14: {color: red, fade: 1000ms}
+    l_p15: {color: red, fade: 1000ms}
+    l_p16: {color: red, fade: 1000ms}
+    l_p17: {color: red, fade: 1000ms}
+    l_p18: {color: red, fade: 1000ms}
+    l_p19: {color: red, fade: 1000ms}
+    l_p20: {color: red, fade: 1000ms}
+    l_p21: {color: red, fade: 1000ms}
+    l_p22: {color: red, fade: 1000ms}
+    l_p23: {color: red, fade: 1000ms}
+    l_p24: {color: red, fade: 1000ms}
+    l_p25: {color: red, fade: 1000ms}
+    l_p26: {color: red, fade: 1000ms}
+    l_p27: {color: red, fade: 1000ms}
+    l_p28: {color: red, fade: 1000ms}
+    l_p29: {color: red, fade: 1000ms}
+    l_p30: {color: red, fade: 1000ms}
+    l_p31: {color: red, fade: 1000ms}
+    l_p32: {color: red, fade: 1000ms}
+    l_b1: {color: red, fade: 1000ms}
+    l_b2: {color: red, fade: 1000ms}
+    l_b3: {color: red, fade: 1000ms}
+    l_b4: {color: red, fade: 1000ms}
+    l_b5: {color: red, fade: 1000ms}
+    l_b6: {color: red, fade: 1000ms}
+    l_b7: {color: red, fade: 1000ms}
+    l_b8: {color: red, fade: 1000ms}
+    l_b9: {color: red, fade: 1000ms}
+    l_b10: {color: red, fade: 1000ms}
+    l_b11: {color: red, fade: 1000ms}
+    l_b12: {color: red, fade: 1000ms}
+    l_b13: {color: red, fade: 1000ms}
+    l_b14: {color: red, fade: 1000ms}
+    l_b15: {color: red, fade: 1000ms}
+    l_b16: {color: red, fade: 1000ms}
+    l_b17: {color: red, fade: 1000ms}
+    l_b18: {color: red, fade: 1000ms}
+    l_b19: {color: red, fade: 1000ms}
+    l_b20: {color: red, fade: 1000ms}
+  color_cycle_white:
+    l_p1: {color: white, fade: 1000ms}
+    l_p2: {color: white, fade: 1000ms}
+    l_p3: {color: white, fade: 1000ms}
+    l_p4: {color: white, fade: 1000ms}
+    l_p5: {color: white, fade: 1000ms}
+    l_p6: {color: white, fade: 1000ms}
+    l_p7: {color: white, fade: 1000ms}
+    l_p8: {color: white, fade: 1000ms}
+    l_p9: {color: white, fade: 1000ms}
+    l_p10: {color: white, fade: 1000ms}
+    l_p11: {color: white, fade: 1000ms}
+    l_p12: {color: white, fade: 1000ms}
+    l_p13: {color: white, fade: 1000ms}
+    l_p14: {color: white, fade: 1000ms}
+    l_p15: {color: white, fade: 1000ms}
+    l_p16: {color: white, fade: 1000ms}
+    l_p17: {color: white, fade: 1000ms}
+    l_p18: {color: white, fade: 1000ms}
+    l_p19: {color: white, fade: 1000ms}
+    l_p20: {color: white, fade: 1000ms}
+    l_p21: {color: white, fade: 1000ms}
+    l_p22: {color: white, fade: 1000ms}
+    l_p23: {color: white, fade: 1000ms}
+    l_p24: {color: white, fade: 1000ms}
+    l_p25: {color: white, fade: 1000ms}
+    l_p26: {color: white, fade: 1000ms}
+    l_p27: {color: white, fade: 1000ms}
+    l_p28: {color: white, fade: 1000ms}
+    l_p29: {color: white, fade: 1000ms}
+    l_p30: {color: white, fade: 1000ms}
+    l_p31: {color: white, fade: 1000ms}
+    l_p32: {color: white, fade: 1000ms}
+    l_b1: {color: white, fade: 1000ms}
+    l_b2: {color: white, fade: 1000ms}
+    l_b3: {color: white, fade: 1000ms}
+    l_b4: {color: white, fade: 1000ms}
+    l_b5: {color: white, fade: 1000ms}
+    l_b6: {color: white, fade: 1000ms}
+    l_b7: {color: white, fade: 1000ms}
+    l_b8: {color: white, fade: 1000ms}
+    l_b9: {color: white, fade: 1000ms}
+    l_b10: {color: white, fade: 1000ms}
+    l_b11: {color: white, fade: 1000ms}
+    l_b12: {color: white, fade: 1000ms}
+    l_b13: {color: white, fade: 1000ms}
+    l_b14: {color: white, fade: 1000ms}
+    l_b15: {color: white, fade: 1000ms}
+    l_b16: {color: white, fade: 1000ms}
+    l_b17: {color: white, fade: 1000ms}
+    l_b18: {color: white, fade: 1000ms}
+    l_b19: {color: white, fade: 1000ms}
+    l_b20: {color: white, fade: 1000ms}
+  color_cycle_blue:
+    l_p1: {color: blue, fade: 1000ms}
+    l_p2: {color: blue, fade: 1000ms}
+    l_p3: {color: blue, fade: 1000ms}
+    l_p4: {color: blue, fade: 1000ms}
+    l_p5: {color: blue, fade: 1000ms}
+    l_p6: {color: blue, fade: 1000ms}
+    l_p7: {color: blue, fade: 1000ms}
+    l_p8: {color: blue, fade: 1000ms}
+    l_p9: {color: blue, fade: 1000ms}
+    l_p10: {color: blue, fade: 1000ms}
+    l_p11: {color: blue, fade: 1000ms}
+    l_p12: {color: blue, fade: 1000ms}
+    l_p13: {color: blue, fade: 1000ms}
+    l_p14: {color: blue, fade: 1000ms}
+    l_p15: {color: blue, fade: 1000ms}
+    l_p16: {color: blue, fade: 1000ms}
+    l_p17: {color: blue, fade: 1000ms}
+    l_p18: {color: blue, fade: 1000ms}
+    l_p19: {color: blue, fade: 1000ms}
+    l_p20: {color: blue, fade: 1000ms}
+    l_p21: {color: blue, fade: 1000ms}
+    l_p22: {color: blue, fade: 1000ms}
+    l_p23: {color: blue, fade: 1000ms}
+    l_p24: {color: blue, fade: 1000ms}
+    l_p25: {color: blue, fade: 1000ms}
+    l_p26: {color: blue, fade: 1000ms}
+    l_p27: {color: blue, fade: 1000ms}
+    l_p28: {color: blue, fade: 1000ms}
+    l_p29: {color: blue, fade: 1000ms}
+    l_p30: {color: blue, fade: 1000ms}
+    l_p31: {color: blue, fade: 1000ms}
+    l_p32: {color: blue, fade: 1000ms}
+    l_b1: {color: blue, fade: 1000ms}
+    l_b2: {color: blue, fade: 1000ms}
+    l_b3: {color: blue, fade: 1000ms}
+    l_b4: {color: blue, fade: 1000ms}
+    l_b5: {color: blue, fade: 1000ms}
+    l_b6: {color: blue, fade: 1000ms}
+    l_b7: {color: blue, fade: 1000ms}
+    l_b8: {color: blue, fade: 1000ms}
+    l_b9: {color: blue, fade: 1000ms}
+    l_b10: {color: blue, fade: 1000ms}
+    l_b11: {color: blue, fade: 1000ms}
+    l_b12: {color: blue, fade: 1000ms}
+    l_b13: {color: blue, fade: 1000ms}
+    l_b14: {color: blue, fade: 1000ms}
+    l_b15: {color: blue, fade: 1000ms}
+    l_b16: {color: blue, fade: 1000ms}
+    l_b17: {color: blue, fade: 1000ms}
+    l_b18: {color: blue, fade: 1000ms}
+    l_b19: {color: blue, fade: 1000ms}
+    l_b20: {color: blue, fade: 1000ms}
