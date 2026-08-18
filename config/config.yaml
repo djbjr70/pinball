@@ -298,18 +298,23 @@ coil_player:
   s_bumper_up_l_active:
     c_bumper_up_l:
       action: pulse
+      pulse_ms: 25
   s_bumper_up_r_active:
     c_bumper_up_r:
       action: pulse
+      pulse_ms: 25
   s_bumper_lower_active:
     c_bumper_lower:
       action: pulse
+      pulse_ms: 25
   s_slingshot_left_active:
     c_slingshot_left:
       action: pulse
+      pulse_ms: 10
   s_slingshot_right_active:
     c_slingshot_right:
       action: pulse
+      pulse_ms: 10
   s_rudys_hideout_active:
     c_kickbig:
       action: pulse
