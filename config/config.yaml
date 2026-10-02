@@ -487,5 +487,5 @@ lights:
 
 show_player:
   machine_reset_phase_3:
-    show: light_test_chase
-    loops: -1
+    light_test_chase:
+      loops: -1
